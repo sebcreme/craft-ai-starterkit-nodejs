@@ -16,10 +16,13 @@
   "scripts": {
     "build": "babel src --out-dir bin",
     "prestart": "npm run build",
-    "start": "node bin/main.js"
+    "start": "node bin/main.js",
+    "predev": "npm run build",
+    "dev": "NODE_ENV=development node bin/main.js"
   },
   "dependencies": {
     "craft-ai-client-js": "craft-ai/craft-ai-client-js",
+    "death": "1.0.0",
     "lodash": "3.10.1"
   },
   "devDependencies": {
