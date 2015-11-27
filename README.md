@@ -11,6 +11,8 @@
 
 ### More ###
 
-If you have to have a develop your craft ai skills, just follow our [tutorials](http://doc.craft.ai/tutorials/index.html) and read our [documentation](http://doc.craft.ai/index.html)
+If you want to develop your **craft ai** skills, just follow our
+[tutorials](http://doc.craft.ai/tutorials/index.html) and read our
+[documentation](http://doc.craft.ai/index.html)
 
-If you have any questions, please contact our [support]('mailto:support@craft.ai')
+If you have any questions, please contact our support at [support@craft.ai]('mailto:support@craft.ai').
