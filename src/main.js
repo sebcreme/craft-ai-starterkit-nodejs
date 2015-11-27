@@ -1,9 +1,9 @@
-import createInstance from 'craft-ai-client-js';
+import craftai from 'craft-ai-client-js';
 import loadCfg from './loadCfg';
 import ON_DEATH from 'death';
 
 loadCfg()
-  .then(config => createInstance(config))
+  .then(config => craftai(config))
   .then(instance => {
     console.log(`'${instance.instanceId}' successfully created!`);
     ON_DEATH(() => {

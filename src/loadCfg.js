@@ -18,11 +18,11 @@ export default function loadConfiguration() {
     appSecret: 'MY_APP_SECRET'
   };
 
+  console.log('Please entre your craft ai project informations (press <ENTER> to use the default value)');
   return new Promise((resolve, reject) => fs.readFile(
     CONFIGURATION_FILE,
     (err, data) => {
       if (err) {
-        console.log('No configuration file found');
         resolve(defaultCfg);
       }
       else {
@@ -30,23 +30,23 @@ export default function loadConfiguration() {
       }
     }))
     .then((config) => new Promise((resolve, reject) => rl.question(
-      ` * Project owner (leave empty to use "${config.owner}"): `,
+      ` * Project owner: (${config.owner}) `,
       answer => resolve(_.isEmpty(answer) ? config : _.set(config, 'owner', answer))
     )))
     .then((config) => new Promise((resolve, reject) => rl.question(
-      ` * Project name (leave empty to use "${config.name}"): `,
+      ` * Project name: (${config.name}) `,
       answer => resolve(_.isEmpty(answer) ? config : _.set(config, 'name', answer))
     )))
     .then((config) => new Promise((resolve, reject) => rl.question(
-      ` * Version (leave empty to use "${config.version}"): `,
+      ` * Version: (${config.version}) `,
       answer => resolve(_.isEmpty(answer) ? config : _.set(config, 'version', answer))
     )))
     .then((config) => new Promise((resolve, reject) => rl.question(
-      ` * Application ID (leave empty to use "${config.appId}"): `,
+      ` * Application ID: (${config.appId}) `,
       answer => resolve(_.isEmpty(answer) ? config : _.set(config, 'appId', answer))
     )))
     .then((config) => new Promise((resolve, reject) => rl.question(
-      ` * Application Secret (leave empty to use "${config.appSecret}"): `,
+      ` * Application Secret: (${config.appSecret}) `,
       answer => resolve(_.isEmpty(answer) ? config : _.set(config, 'appSecret', answer))
     )))
     .then((config) => {
@@ -58,6 +58,7 @@ export default function loadConfiguration() {
           if (err) {
             reject(err);
           }
+          console.log(`Configuration saved to '${CONFIGURATION_FILE}', next time you won't have to enter anything.`);
           resolve(config);
       }));
     });
