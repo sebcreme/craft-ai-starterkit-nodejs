@@ -54,7 +54,7 @@
           {
             "activated": true,
             "metadata": {
-              "label": ""
+              "label": "is sun is down"
             },
             "properties": {
               "op1": {
@@ -74,7 +74,7 @@
                   "label": ""
                 },
                 "properties": {
-                  "name": "",
+                  "name": "Close",
                   "inputParams": [],
                   "outputParams": []
                 },
