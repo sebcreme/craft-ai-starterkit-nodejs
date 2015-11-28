@@ -8,7 +8,89 @@
       "label": ""
     },
     "properties": {},
-    "children": [],
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": "If sun is up"
+            },
+            "properties": {
+              "op1": {
+                "type": "behaviorParams",
+                "value": "true"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "name": "Open",
+                  "inputParams": [],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "e223f47f-c34a-4640-ae4b-8008185dfed6",
+                "type": "action"
+              }
+            ],
+            "id": "9ba99df0-20ba-416b-821e-9da0a739e4f7",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "name": "",
+                  "inputParams": [],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "67fa3129-41ff-4322-bb69-89b32b5c5ac1",
+                "type": "action"
+              }
+            ],
+            "id": "a8210b36-8807-48b4-9385-ce83e30f2eff",
+            "type": "condition"
+          }
+        ],
+        "id": "4318e3ae-a9ae-48f3-9334-d8508a6e9716",
+        "type": "sequence"
+      }
+    ],
     "id": "03460752-bd1b-4a48-b85d-3daa337ee732"
   }
 ]
