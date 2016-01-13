@@ -8,7 +8,134 @@
       "label": ""
     },
     "properties": {},
-    "children": [],
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {
+          "active": "false"
+        },
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "counter"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "3"
+                  },
+                  "op": ">"
+                },
+                "children": [],
+                "id": "9a9d99ae-80d6-40a7-b4ae-ca8dbc74cf11",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "Say"
+                },
+                "properties": {
+                  "name": "say",
+                  "inputParams": [
+                    {
+                      "key": "Message",
+                      "type": "string",
+                      "value": "Vous avez été voir plus de 3 fois vos messages. Vous devriez activé les notifications. "
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "6e33e5db-5610-4793-a473-43a6d0f7fb81",
+                "type": "action"
+              }
+            ],
+            "id": "c4a1a070-a9b8-4732-a6c4-10fbac77527b",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "User views Messages"
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "view"
+                  },
+                  "op2": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op": "=="
+                },
+                "children": [],
+                "id": "b27c6ca3-d148-4ce0-9f48-14646403f309",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "get counter from tel"
+                },
+                "properties": {
+                  "name": "get_counter",
+                  "inputParams": [
+                    {
+                      "key": "counter",
+                      "type": "entityKnowledge",
+                      "value": "counter"
+                    }
+                  ],
+                  "outputParams": [
+                    {
+                      "key": "conter_updated",
+                      "type": "entityKnowledge",
+                      "value": "counter"
+                    },
+                    {
+                      "key": "timestamp",
+                      "type": "entityKnowledge",
+                      "value": "counter_timestamp"
+                    }
+                  ]
+                },
+                "children": [],
+                "id": "3cb34ef8-16b6-496e-81a8-8fa231831ac8",
+                "type": "action"
+              }
+            ],
+            "id": "4ab4a637-741a-413b-8bc1-ed85e0978662",
+            "type": "sequence"
+          }
+        ],
+        "id": "4afdfec8-ab40-42a2-939f-e5dbf9e7b1cc",
+        "type": "priority"
+      }
+    ],
     "id": "1b45754b-bd80-4748-9044-7e57b245a85a"
   }
 ]
